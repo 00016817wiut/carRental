@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+*::selection {
+  background-color: #835ccd;
+  color: #fff;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+body {
+  background: url("../images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.content {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: auto;
+}
+.header {
+  height: 110px;
+  background-color: #1d142df0;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: inherit;
+}
+.nav__logo {
+  font-size: 2.5em;
+  font-weight: bolder;
+  color: #fff;
+}
+.nav__list {
+  display: flex;
+  gap: 20px;
+}
+.nav__list-item {
+  color: #fff;
+  font-style: 16px;
+}
+.active__link {
+  color: #835ccd;
+}
+.nav__sublist {
+  position: absolute;
+  background-color: #1d142df0;
+  border: 1px solid #2c1c49;
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+  top: 20px;
+  left: 0;
+  z-index: 2;
+}
+.nav__sublist-item {
+  padding: 10px 20px;
+  display: block;
+}
+.nav__sublist-item:hover {
+  background: #2c1c49;
+}
+.nav__border {
+  border-top: 1px solid #2c1c49;
+  border-bottom: 1px solid #2c1c49;
+}
+.nav__list-link:hover .nav__sublist {
+  transform: scaleY(1);
+}
+.nav__list-item-arrow {
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
+  background: #fff;
+  width: 8px;
+  height: 4px;
+  transition: 0.5s;
+}
+.nav__list-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.nav__list-link:hover .nav__list-item-arrow {
+  transform: rotate(180deg);
+}
+/* MAIN */
+.first {
+  padding: 50px 0;
+}
+.second {
+  padding: 50px 0;
+}
+.first__title {
+  font-size: 2.2em;
+  text-align: center;
+  padding-bottom: 25px;
+  color: #fff;
+}
+.section__title {
+  color: #fff;
+  text-align: center;
+  padding-bottom: 25px;
+}
+.first__container,
+.second__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 60px;
+}
+.container {
+  position: relative;
+  width: 320px;
+  height: 400px;
+  overflow: hidden;
+}
+
+/* container with bg */
+.container-item {
+  position: absolute;
+  top: 0;
+  background: url("../images/c5.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  height: 400px;
+  transition: 0.5s;
+}
+.container-item:hover {
+  transform: scale(1.1);
+}
+/* container nth */
+.container:nth-child(2) .container-item {
+  background: url("../images/mark2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container:nth-child(3) .container-item {
+  background: url("../images/lc500.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container:nth-child(4) .container-item {
+  background: url("../images/350z.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container:nth-child(5) .container-item {
+  background: url("../images/rx7.jpg");
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container:nth-child(6) .container-item {
+  background: url("../images/rx7.jpg");
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.second__container .container:nth-child(1) .container-item {
+  background: url("../images/hellcat.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.second__container .container:nth-child(2) .container-item {
+  background: url("../images/bmw.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.second__container .container:nth-child(3) .container-item {
+  background: url("../images/720ы.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* container descr */
+.container-descr {
+  position: absolute;
+  color: #fff;
+  padding: 10px 15px;
+  text-align: center;
+  background: #000000bc;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: 0.3s;
+}
+.container:hover .container-descr {
+  transform: scaleY(1);
+}
+@media screen and (max-width: 1200px) {
+  .content {
+    max-width: 800px;
+    padding: 0 15px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 800px) {
+  .content {
+    padding: 0 30px;
+  }
+  .first__container {
+    gap: 50px;
+  }
+}
