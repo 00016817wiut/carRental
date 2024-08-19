@@ -215,6 +215,9 @@ body {
 .container:hover .container-descr {
   transform: scaleY(1);
 }
+.third__container {
+  text-align: center;
+}
 @media screen and (max-width: 1200px) {
   .content {
     max-width: 800px;
